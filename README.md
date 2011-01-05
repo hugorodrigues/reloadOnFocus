@@ -11,7 +11,7 @@ It simply auto refresh the browser window when it gets focus.
 
 
 ### Why/WTF? ###
-While i code (especialy html/css) i need to switch between the editor and the browser(s) to check my changes.
+While coding i switch between the editor and the browser(s) to check my changes (especially if it is html/css).
 
 Usually i do CMD+TAB / CTRL+TAB to switch windows and then click the browser
 Refresh button (or F5).
@@ -27,7 +27,7 @@ With this (simple) script i can work on any editor and any browsers without inst
 
 ### Usage ###
 In the page(s) that you are working add:
-    <script type="text/javascript" src="http://github.com/hugorodrigues/jquery.min.js"></script>
+    <script type="text/javascript" src="https://github.com/hugorodrigues/reloadOnFocus/raw/master/reloadOnFocus.js"></script>
 
 Now next time you switch between any app and the browser the page will be automatically reloaded.
 
