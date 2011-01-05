@@ -27,7 +27,7 @@ With this (simple) script i can work on any editor and any browsers without inst
 
 ### Usage ###
 In the page(s) that you are working add:
-    <script type="text/javascript" src="https://github.com/hugorodrigues/reloadOnFocus/raw/master/reloadOnFocus.js"></script>
+    <script type="text/javascript" src="http://os.hugorodrigues.com/reloadOnFocus.js"></script>
 
 Now next time you switch between any app and the browser the page will be automatically reloaded.
 
