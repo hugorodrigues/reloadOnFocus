@@ -44,15 +44,16 @@ var ROF = {
 
             ROFdiv.setAttribute('id', 'ROFdiv');
 
-            ROFdiv.style.position = 'absolute';
-            ROFdiv.style.top = '5';
-            ROFdiv.style.left = '5';
+            ROFdiv.style.position = "fixed";
+            ROFdiv.style.top = '5px';
+            ROFdiv.style.left = '5px';
             ROFdiv.style.background = "#1F1F1F";
             ROFdiv.style.color = "white";
             ROFdiv.style.fontFamily = '"Trebuchet MS",Verdana,sans-serif';
-            ROFdiv.style.fontSize = '12';
+            ROFdiv.style.fontSize = '12px';
             ROFdiv.style.border = "3px solid #CF2626";
-            ROFdiv.style.padding = "5";
+            ROFdiv.style.padding = "5px";
+            ROFdiv.style.zIndex = "9999999";
 
             document.body.appendChild(ROFdiv);
             ROF.ui.obj = document.getElementById('ROFdiv');
@@ -62,7 +63,7 @@ var ROF = {
         msg : function(msg)
         {
             if (!ROF.ui.obj) ROF.ui.init();
-            ROF.ui.obj.style.display = "";
+            ROF.ui.obj.style.display = "block";
             ROF.ui.obj.innerHTML = msg;
             return;
         },
