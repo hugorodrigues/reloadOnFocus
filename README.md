@@ -32,6 +32,27 @@ In the page(s) that you are working add:
 Now next time you switch between any app and the browser the page will be automatically reloaded.
 
 
+### Options ###
+Use CTRL+ENTER to enable/disable the plugin
+
+
+
+
+### Tested ###
+Osx
+* Safari 5
+* Firefox 3.6
+* Chrome 8
+
+Windows XP
+* Internet Explorer 8
+* Firefox 3.6
+* Chrome 8
+
+Linux
+Not tested, but should work :)
+
+
 ### Limitations ###
 For sure there are many. Give it a try.
 
