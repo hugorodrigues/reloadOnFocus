@@ -1,16 +1,10 @@
-### reloadOnFocus ###
-
-
-### License ###
-This software is licensed under the highly restrictive <a href="http://en.wikipedia.org/wiki/WTFPL">DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 2.0</a> or later.
-If this license doesn't suit you: you're doing it wrong.
-
-
-### What it does? ###
+# reloadOnFocus
 It simply auto refresh the browser window when it gets focus.
 
 
-### Why/WTF? ###
+
+
+## Why / WTF?
 While coding i switch between the editor and the browser(s) to check my changes (especially if it is html/css).
 
 Usually i do CMD+TAB / CTRL+TAB to switch windows and then click the browser
@@ -25,34 +19,45 @@ There are already some apps/plugins but they are not cross-editor / cross-platfo
 With this (simple) script i can work on any editor and any browsers without installing anything.
 
 
-### Usage ###
+
+
+
+## Usage
 In the page(s) that you are working add:
     <script type="text/javascript" src="http://os.hugorodrigues.com/reloadOnFocus.js"></script>
 
 Now next time you switch between any app and the browser the page will be automatically reloaded.
 
 
-### Options ###
-Use CTRL+ENTER to enable/disable the plugin
+## Options
+Use `CTRL+ENTER` to enable/disable the plugin
 
 
 
 
-### Tested ###
+## Tested
 Osx
+
 * Safari 5
 * Firefox 3.6
 * Chrome 8
 
 Windows XP
+
 * Internet Explorer 8
 * Firefox 3.6
 * Chrome 8
 
 Linux
-Not tested, but should work :)
+
+* Not tested, but should work :)
 
 
-### Limitations ###
+## Limitations
 For sure there are many. Give it a try.
+
+## License
+This software is licensed under the highly restrictive <a href="http://en.wikipedia.org/wiki/WTFPL">DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 2.0</a> or later.
+If this license doesn't suit you: you're doing it wrong.
+
 

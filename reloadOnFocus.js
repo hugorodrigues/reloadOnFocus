@@ -32,6 +32,8 @@ var ROF = {
 
             window.location.reload(true);
         }
+
+        
        
     },
 
@@ -40,31 +42,62 @@ var ROF = {
         obj : '',
         init : function()
         {
+            console.log('initui');
             var ROFdiv = document.createElement('div');
 
             ROFdiv.setAttribute('id', 'ROFdiv');
 
-            ROFdiv.style.position = "fixed";
-            ROFdiv.style.top = '5px';
-            ROFdiv.style.left = '5px';
-            ROFdiv.style.background = "#1F1F1F";
-            ROFdiv.style.color = "white";
-            ROFdiv.style.fontFamily = '"Trebuchet MS",Verdana,sans-serif';
-            ROFdiv.style.fontSize = '12px';
-            ROFdiv.style.border = "3px solid #CF2626";
-            ROFdiv.style.padding = "5px";
+            ROFdiv.style.position = "absolute";
             ROFdiv.style.zIndex = "9999999";
+            ROFdiv.style.display = "none";
+            
+            ROFdiv.style.top = '10px';
+            ROFdiv.style.left = '10px';
+            ROFdiv.style.padding = "10px";
+
+            ROFdiv.style.background = "#B81900";
+            //ROFdiv.style.background = "-webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e))";
+            //ROFdiv.style.background = "-moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%)";
+            
+            ROFdiv.style.color = "white";
+            ROFdiv.style.fontFamily = 'Arial,Verdana';
+            ROFdiv.style.fontSize = '14px';
+
+            ROFdiv.style.borderRadius="4px";
+            ROFdiv.style.MozBorderRadius=ROFdiv.style.borderRadius;
+
+            ROFdiv.style.boxShadow='0px 0px 5px #999';
+            ROFdiv.style.WebkitBoxShadow=ROFdiv.style.boxShadow;
+            ROFdiv.style.MozBoxShadow = ROFdiv.style.boxShadow;
+
 
             document.body.appendChild(ROFdiv);
             ROF.ui.obj = document.getElementById('ROFdiv');
 
             return;
         },
+        status: function()
+        {
+            if (!ROF.ui.obj) ROF.ui.init();
+            
+            if (ROF.cookies.read('globalPower') === true)
+            {
+                ROF.ui.obj.style.background = "#3DB800";
+                ROF.ui.msg('reloadOnFocus is enabled.');
+            } else
+            {
+                ROF.ui.obj.style.background = "#B81900";
+                ROF.ui.msg('reloadOnFocus is disabled.');
+            }
+            clearInterval(ROF.ui.timer);
+            ROF.ui.timer = setTimeout(ROF.ui.hide,1000);
+        },
         msg : function(msg)
         {
             if (!ROF.ui.obj) ROF.ui.init();
-            ROF.ui.obj.style.display = "block";
+            
             ROF.ui.obj.innerHTML = msg;
+            ROF.ui.obj.style.display = "block";
             return;
         },
         hide : function()
@@ -95,9 +128,7 @@ var ROF = {
             if(e.keyCode == 13 && ROF.key.isCtrl == true)
             {
                 ROF.cookies.create('globalPower',!Boolean(ROF.cookies.read('globalPower')));
-                //console.log('Power: '+ROF.cookies.read('globalPower'));
-                ROF.ui.msg('Enabled? '+ROF.cookies.read('globalPower'));
-                setTimeout(ROF.ui.hide,1000);
+                ROF.ui.status();
             }
         }
     },
@@ -143,4 +174,6 @@ var ROF = {
     
 }
 
-ROF.init();
+
+
+    ROF.init();
